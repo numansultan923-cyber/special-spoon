@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ur" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AllKind Downloads - مفت ڈاؤنلوڈ</title>
+  <meta name="description" content="AllKind Downloads - Books, Software, Music, Notes اور Documents مفت میں ڈاؤنلوڈ کریں۔">
+  <style>
+    :root{--bg:#f7f7f9;--card:#ffffff;--accent:#0b5ed7;--muted:#6b7280}
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Noto Sans',"جیو",sans-serif;background:var(--bg);color:#111}
+    header{background:linear-gradient(90deg, #0b63d7 0%, #0b9bd7 100%);color:#fff;padding:18px 16px}
+    .container{max-width:980px;margin:20px auto;padding:0 16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:46px;height:46px;border-radius:8px;display:inline-grid;place-items:center;background:#fff;color:var(--accent);font-weight:700}
+    h1{font-size:20px;margin:0}
+    nav{margin-top:12px}
+    nav a{color:rgba(255,255,255,0.92);text-decoration:none;margin-right:14px;font-size:14px}
+    .search{margin-top:16px}
+    .search input{width:100%;padding:12px;border-radius:10px;border:0}
+    .grid{display:grid;grid-template-columns:1fr 300px;gap:18px;margin-top:18px}
+    main{min-height:300px}
+    .card{background:var(--card);padding:14px;border-radius:12px;box-shadow:0 6px 18px rgba(10,10,10,0.04)}
+    .categories{display:flex;gap:8px;flex-wrap:wrap}
+    .cat{padding:8px 10px;border-radius:8px;background:#eef6ff;color:var(--accent);font-weight:600;font-size:13px}
+    .item{display:flex;justify-content:space-between;align-items:center;padding:10px;border-radius:8px;border:1px solid #f0f0f3;margin-bottom:10px}
+    .item .meta{max-width:70%}
+    .item h3{margin:0;font-size:15px}
+    .item p{margin:6px 0 0;color:var(--muted);font-size:13px}
+    .btn{background:var(--accent);color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:600}
+    .small{font-size:12px;color:var(--muted)}
+    aside .card{position:sticky;top:18px}
+    footer{margin-top:28px;text-align:center;color:var(--muted);font-size:13px;padding:28px 16px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr}} 
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <div class="brand">
+        <div class="logo">AK</div>
+        <div>
+          <h1>AllKind Downloads</h1>
+          <div class="small">Free resources — Books, Software, Music, Notes</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">ہوم</a>
+        <a href="#categories">کیٹیگریز</a>
+        <a href="#about">ہمارے بارے میں</a>
+        <a href="#contact">رابطہ</a>
+      </nav>
+      <div class="search">
+        <input id="q" placeholder="کچھ تلاش کریں — مثال: کتاب، نوٹس، سافٹ ویئر" />
+      </div>
+    </div>
+  </header>
+  <div class="container grid">
+    <main>
+      <section id="home" class="card">
+        <h2>تازہ ترین اشیاء</h2>
+        <div class="categories" style="margin-top:12px">
+          <div class="cat">Books</div>
+          <div class="cat">Software</div>
+          <div class="cat">Music</div>
+          <div class="cat">Notes</div>
+          <div class="cat">Documents</div>
+        </div>
+        <div id="items" style="margin-top:16px">
+          <div class="item" data-tags="book pdf programming">
+            <div class="meta">
+              <h3>Learn Python - Sample Book</h3>
+              <p class="small">کتاب — PDF • 2.1 MB • Programmer guide</p>
+            </div>
+            <div>
+              <a class="btn" href="files/learn-python-sample.pdf" download>Download</a>
+            </div>
+          </div>
+          <div class="item" data-tags="software setup windows">
+            <div class="meta">
+              <h3>Example Free Utility - Setup</h3>
+              <p class="small">Software — ZIP • 8 MB • Free tool</p>
+            </div>
+            <div>
+              <a class="btn" href="files/example-utility.zip" download>Download</a>
+            </div>
+          </div>
+          <div class="item" data-tags="notes math highschool">
+            <div class="meta">
+              <h3>Math Notes - Chapter 1</h3>
+              <p class="small">Notes — PDF • 320 KB • High school</p>
+            </div>
+            <div>
+              <a class="btn" href="files/math-ch1.pdf" download>Download</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="categories" class="card" style="margin-top:14px">
+        <h2>کیٹیگریز</h2>
+        <p class="small">نیچے دی گئی کیٹیگریز پر کلک کر کے فِلٹر کریں یا سرچ بار میں لکھیں</p>
+        <div style="margin-top:12px">
+          <button class="cat" onclick="filter('book')">Books</button>
+          <button class="cat" onclick="filter('software')">Software</button>
+          <button class="cat" onclick="filter('music')">Music</button>
+          <button class="cat" onclick="filter('notes')">Notes</button>
+          <button class="cat" onclick="filter('')">Clear</button>
+        </div>
+      </section>
+      <section id="about" class="card" style="margin-top:14px">
+        <h2>ہمارے بارے میں</h2>
+        <p class="small">AllKind Downloads ایک سادہ پلیٹ فارم ہے جہاں آپ قانونی اور مفید مواد مفت میں ڈاؤنلوڈ کر سکتے ہیں۔ مواد اپلوڈ کرنے سے پہلے یقینی بنائیں کہ آپ کے پاس اس کا حق ہے۔</p>
+      </section>
+      <section id="contact" class="card" style="margin-top:14px">
+        <h2>رابطہ</h2>
+        <p class="small">اگر آپ کسی فائل کے بارے میں پوچھنا چاہتے ہیں یا اس سائٹ کے بارے میں تجاویز دینا چاہتے ہیں تو ہمیں یہاں ای میل کریں:</p>
+        <p><strong>example@email.com</strong></p>
+      </section>
+      <section id="privacy" class="card" style="margin-top:14px">
+        <h2>Privacy Policy (نمونہ)</h2>
+        <p class="small">یہ ایک سادہ پالیسی ہے: ہم صارفین کے ذاتی ڈیٹا کو محفوظ رکھتے ہیں اور بغیر اجازت آن لائن شائع نہیں کرتے۔ قانونی دعووں پر ہم فائل حذف کر دیں گے۔</p>
+      </section>
+    </main>
+    <aside>
+      <div class="card">
+        <h3>Quick Tips</h3>
+        <ul class="small">
+          <li>فائلز ڈاؤنلوڈ کرنے کے لیے 'files/' فولڈر میں حقیقی فائلز رکھیں۔</li>
+          <li>AdSense کے لیے قانونی مواد ضروری ہے۔</li>
+          <li>GitHub Pages یا Netlify پر آسانی سے deploy کریں۔</li>
+        </ul>
+      </div>
+    </aside>
+  </div>
+  <footer>
+    <div class="container">
+      © <span id="year"></span> AllKind Downloads — All rights reserved.
+    </div>
+  </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function filter(tag){
+      const items = document.querySelectorAll('#items .item');
+      items.forEach(it=>{
+        if(!tag) it.style.display = 'flex';
+        else it.style.display = (it.dataset.tags && it.dataset.tags.includes(tag)) ? 'flex' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
